@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"
+        tools:ignore="ExtraText">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/login"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ihelp"
+            android:title="@string/h"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/help"
+            android:title="Help Desk" />
+
+
+    </group>
+</menu>
