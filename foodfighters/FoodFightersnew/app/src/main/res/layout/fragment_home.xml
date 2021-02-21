@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="119dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="588dp"
+        android:orientation="horizontal"
+        android:scaleType="fitCenter"
+        android:src="@drawable/symbol"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="294dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:text="Food Samaritans"
+        android:textColor="#FF0000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+
+        android:layout_width="313dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="60dp"
+        android:text="Food Waste is not in Good Taste"
+        android:textAlignment="center"
+
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <Button
+        android:layout_width="376dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="#FF0000"
+        android:text="Choose Category"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="273dp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/bakery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="588dp"
+            android:orientation="horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bakery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+        </ImageView>
+
+
+
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>

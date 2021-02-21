@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:backgroundTintMode="add"
+    android:dividerPadding="5dp"
+    android:foregroundTint="@color/design_default_color_error"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:overScrollMode="ifContentScrolls"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:textAlignment="gravity"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:visibility="visible"
+    app:barrierMargin="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/symbol"
+        android:layout_width="169dp"
+        android:layout_height="112dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:layoutDirection="ltr"
+        android:paddingStart="2dp"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp"
+        android:textAlignment="viewStart"
+        android:tint="#F44336"
+        app:srcCompat="@drawable/symbol" />
+
+    <TextView
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:accessibilityLiveRegion="polite"
+        android:fontFamily="sans-serif-black"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Food Fighters"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#F44336" />
+
+</LinearLayout>
