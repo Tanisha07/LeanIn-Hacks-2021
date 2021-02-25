@@ -20,7 +20,7 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ihelp"
-            android:title="@string/h"/>
+            android:title="Are you a Food Samaritan?"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/help"
