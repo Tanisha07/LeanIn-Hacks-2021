@@ -31,17 +31,23 @@
         android:layout_width="397dp"
         android:layout_height="41dp"
         android:layout_marginTop="20dp"
-        android:text="Select the items you would like to donate"
-        android:textAlignment="textEnd"
+        android:gravity="center"
+        android:text="Make a donation"
+        android:textAlignment="gravity"
         android:textColor="#CC1717"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Donate" />
 
     <ImageView
         android:layout_width="203dp"
         android:layout_height="105dp"
         android:src="@drawable/m"
         android:layout_marginTop="50dp"/>
-
 
 
     <ImageView
@@ -69,4 +75,5 @@
         android:layout_width="match_parent"
         android:layout_height="172dp"
         android:src="@drawable/prep" />
+
 </LinearLayout>

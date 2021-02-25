@@ -34,13 +34,13 @@ class HomeFragment : Fragment() {
         })
         val view: View = inflater!!.inflate(R.layout.fragment_home, container, false)
         // connecting to button8 from xml file
-        //val button = root.findViewById<Button>(R.id.button8)
-        //setting onClick listener
-        //button.setOnClickListener {
-            // intent to donation act
-           // val intent = Intent(activity, donate::class.java)
-           // activity?.startActivity(intent)
-       // }
+        val button = root.findViewById<Button>(R.id.button8)
+//        setting onClick listener
+        button.setOnClickListener {
+//             intent to donation act
+            val intent = Intent(activity, donate::class.java)
+            activity?.startActivity(intent)
+        }
         return root
     }
 
