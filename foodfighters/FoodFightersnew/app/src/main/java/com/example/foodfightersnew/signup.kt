@@ -37,10 +37,16 @@ class signup : AppCompatActivity() {
 
     fun donor(view: View){
         userType = 1
+        val intent = Intent(applicationContext, datails::class.java)
+        intent.putExtra("user", userType)
+        startActivity(intent)
     }
 
     fun dist(view: View){
         userType = 2
+        val intent = Intent(applicationContext, datails::class.java)
+        intent.putExtra("user", userType)
+        startActivity(intent)
     }
 
 }

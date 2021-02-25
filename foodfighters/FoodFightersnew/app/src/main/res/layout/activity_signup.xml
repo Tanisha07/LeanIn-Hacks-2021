@@ -58,6 +58,7 @@
         android:layout_width="127dp"
         android:layout_height="52dp"
         android:layout_marginBottom="96dp"
+        android:enabled="false"
         android:onClick="viewDetails"
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"

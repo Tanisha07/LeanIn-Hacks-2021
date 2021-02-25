@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodFightersNew">
-        <activity android:name=".datails"></activity>
+        <activity android:name=".Enter_items"></activity>
+        <activity android:name=".donate" />
+        <activity android:name=".datails" />
         <activity android:name=".signup" />
         <activity android:name=".start" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".MainActivity2"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.FoodFightersNew.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

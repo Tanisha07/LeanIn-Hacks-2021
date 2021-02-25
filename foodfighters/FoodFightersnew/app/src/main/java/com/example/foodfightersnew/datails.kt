@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.foodfightersnew.ui.home.HomeFragment
 import kotlinx.android.synthetic.main.activity_datails.*
 import kotlin.math.log
 
@@ -58,11 +59,17 @@ class datails : AppCompatActivity() {
     // after text boxes
     fun next(view: View){
 //        val type = intent.getIntExtra("user", -1)
+
+        if(state==2){
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
+        }
         if(state ==1)
             state = 2
         if(type!=-1){
             setImage(type)
         }
+
     }
 
     fun setImage(type: Int){
