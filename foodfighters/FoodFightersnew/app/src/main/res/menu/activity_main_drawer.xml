@@ -10,6 +10,10 @@
             android:icon="@drawable/home"
             android:title="@string/menu_home" />
         <item
+            android:id="@+id/accdetails"
+            android:icon="@drawable/acc"
+            android:title="My Account"/>
+        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/login"
             android:title="Login" />
@@ -21,6 +25,7 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/help"
             android:title="Help Desk" />
+
 
 
     </group>
