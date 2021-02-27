@@ -6,14 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".donate">
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="fill_parent"-->
+<!--        tools:ignore="MissingConstraints">-->
+<!--        <ListView-->
+<!--            android:id="@+id/listView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/gen"-->
+<!--            android:layout_width="248dp"-->
+<!--            android:layout_height="133dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:text="Regenerate"-->
+<!--            android:textColor="#ffff9933"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            android:typeface="serif" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/gen2"-->
+<!--            android:layout_width="248dp"-->
+<!--            android:layout_height="134dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:text="Regenerate"-->
+<!--            android:textColor="#ffff9933"-->
+<!--            android:textStyle="bold|italic"-->
+<!--            android:typeface="serif" />-->
+<!--    </LinearLayout>-->
+<!--    <ListView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:layout_editor_absoluteY="-61dp">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/button5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Add" />-->
+<!--    </ListView>-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/gen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="addItem"
+            android:text="Add Item" />
+
+        <Button
+            android:id="@+id/gen2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="next"
+            android:text="Next" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

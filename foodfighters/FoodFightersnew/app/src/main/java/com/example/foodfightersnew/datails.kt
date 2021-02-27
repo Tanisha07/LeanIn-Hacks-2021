@@ -16,8 +16,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+//import com.example.foodfightersnew.Global.Companion.uuid
 import com.example.foodfightersnew.ui.home.HomeFragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_datails.*
+import java.util.*
 import kotlin.math.log
 
 class datails : AppCompatActivity() {
@@ -25,6 +30,14 @@ class datails : AppCompatActivity() {
     // state 1-> textViews for details
     // state 2-> imageViews
     var state = 1
+
+    // firebase var initialization
+    var mAuth : FirebaseAuth?=null
+    val mAuthListener: FirebaseAuth.AuthStateListener? = null
+    var firebaseDatabase : FirebaseDatabase? = null
+    var mRef: DatabaseReference? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datails)
@@ -38,6 +51,16 @@ class datails : AppCompatActivity() {
             textView17.text = "Donor"
         if(type==2)
             textView17.text = "Distributer"
+
+        // getting firebase instance
+        try {
+            mAuth = FirebaseAuth.getInstance()
+            firebaseDatabase = FirebaseDatabase.getInstance()
+            mRef = firebaseDatabase!!.reference
+        }
+        catch (e : Exception){
+            Toast.makeText(applicationContext, e.localizedMessage.toString(), Toast.LENGTH_LONG).show()
+        }
     }
 
     // go to prev Act
@@ -64,17 +87,22 @@ class datails : AppCompatActivity() {
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
         }
-        if(state ==1)
+        if(state ==1) {
             state = 2
+            addData()
+        }
         if(type!=-1){
             setImage(type)
         }
+
+
 
     }
 
     fun setImage(type: Int){
         disappearBox()
         showImg()
+//        addData()
         if(type==1){
             imageView.setImageResource(R.drawable.ic_launcher_background)
             imageView2.setImageResource(R.drawable.ic_launcher_background)
@@ -124,11 +152,51 @@ class datails : AppCompatActivity() {
     }
 
     fun showImg(){
-        Toast.makeText(applicationContext, "yoohooo", Toast.LENGTH_LONG).show()
+//        Toast.makeText(applicationContext, "yoohooo", Toast.LENGTH_LONG).show()
         imageView.visibility = View.VISIBLE
         imageView2.visibility = View.VISIBLE
         imageView3.visibility = View.VISIBLE
         imageView4.visibility = View.VISIBLE
+    }
+
+    fun addData(){
+
+
+        try {
+//            val uuid = UUID.randomUUID()
+//            val imgName = "images/$uuid.jpg"
+//            val storageRef = storageReference!!.child(imgName)
+
+
+//                var downloadUrl = taskSnapshot.metadata!!.reference!!.downloadUrl.toString()
+            val user = mAuth!!.currentUser
+            val userEmail = user!!.email.toString()
+            val userName = textView9.text.toString()
+            val userPhone = textView12.text.toString()
+            val userAdd = textView14.text.toString()
+            val userType = type.toString()
+//            val userName = textView9.text.toString()
+            val uuid = UUID.randomUUID()
+            Global.curr_uuid = uuid
+
+            val uuidString = uuid.toString()
+
+
+            mRef!!.child("User").child(uuidString).child("userMail").setValue(userEmail)
+            mRef!!.child("User").child(uuidString).child("userName").setValue(userName)
+            mRef!!.child("User").child(uuidString).child("userPhone").setValue(userPhone)
+            mRef!!.child("User").child(uuidString).child("userAdd").setValue(userAdd)
+            mRef!!.child("User").child(uuidString).child("userType").setValue(userType)
+            Toast.makeText(applicationContext, uuidString, Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Details Saved", Toast.LENGTH_LONG).show()
+
+        }
+        catch (e : Exception){
+            e.printStackTrace()
+            Toast.makeText(applicationContext, e.message.toString(), Toast.LENGTH_LONG)
+        }
+
+
     }
 
 }

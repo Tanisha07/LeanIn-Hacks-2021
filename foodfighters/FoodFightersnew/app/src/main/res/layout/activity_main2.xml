@@ -73,7 +73,8 @@
             android:layout_marginLeft="31dp"
             android:layout_marginTop="16dp"
             android:layout_toRightOf="@id/textView4"
-            android:hint="Username" />
+            android:hint="Username"
+            android:text="nirvana@gmail.com" />
 
         <TextView
         android:id="@+id/pass"
@@ -95,7 +96,8 @@
             android:layout_marginTop="55dp"
             android:layout_toRightOf="@id/textView4"
             android:hint="password"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:text="123456" />
 
         "
 

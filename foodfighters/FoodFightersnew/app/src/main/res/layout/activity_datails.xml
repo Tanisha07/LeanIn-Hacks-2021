@@ -13,6 +13,7 @@
         android:layout_marginTop="168dp"
         android:layout_marginEnd="64dp"
         android:hint="name"
+        android:text="me"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +35,7 @@
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:hint="XXXXXXXXXX"
+        android:text="999999"
         app:layout_constraintEnd_toEndOf="@+id/textView9"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView9"
@@ -80,6 +82,7 @@
         android:layout_height="67dp"
         android:layout_marginTop="16dp"
         android:hint="enter your address"
+        android:text="home"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="@+id/textView10"
         app:layout_constraintHorizontal_bias="0.0"
