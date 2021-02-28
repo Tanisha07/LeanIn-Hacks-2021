@@ -15,6 +15,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -211,6 +212,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     val loc = hashMap["userLoc"]
                     val lat = hashMap["latitude"].toString()
                     val long = hashMap["longitude"].toString()
+                    val type = hashMap["userType"].toString()
+                    val food = hashMap["item_name"].toString()
+
 //                    val food = hashMap["loc"]
 //                    if(lat==null){
 //                        Toast.makeText(applicationContext, "oopsie", Toast.LENGTH_LONG).show()
@@ -220,14 +224,27 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 //                    val a: List<List<String>> = food.filterIsInstance<String>()
 
                     if (lat != null && name != null && long!=null) {
-                        mMap.addMarker(
-                            MarkerOptions().position(
-                                LatLng(
-                                    lat.toDouble(),
-                                    long.toDouble()
-                                )
-                            ).title(name.toString())
-                        )
+
+                        if(type=="1"){
+                            mMap.addMarker(
+                                    MarkerOptions().position(
+                                            LatLng(
+                                                    lat.toDouble(),
+                                                    long.toDouble()
+                                            )
+                                    ).snippet(food)
+                            )
+                        }
+                        else{
+                            mMap.addMarker(
+                                    MarkerOptions().position(
+                                            LatLng(
+                                                    lat.toDouble(),
+                                                    long.toDouble()
+                                            )
+                                    ).title(name.toString()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+                            )
+                        }
 //                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLastLoc, 15f))
                     }
 

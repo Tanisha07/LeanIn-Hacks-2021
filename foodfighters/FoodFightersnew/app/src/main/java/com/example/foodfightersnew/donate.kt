@@ -107,7 +107,11 @@ class donate : AppCompatActivity() {
 
 //            val uuidString = uuid.toString()
 
-            mRef!!.child("User").child(uuidString).child("food").setValue(Global.item_name)
+            val s = ""
+            for(ans in Global.item_name)
+                s+" ,"
+
+            mRef!!.child("User").child(uuidString).child("food").setValue(s)
             mRef!!.child("User").child(uuidString).child("qty").setValue(Global.item_qty)
             mRef!!.child("User").child(uuidString).child("food_type").setValue(Global.item_type)
             Toast.makeText(applicationContext, "Saved", Toast.LENGTH_LONG).show()

@@ -182,6 +182,8 @@ class datails : AppCompatActivity() {
             val uuidString = uuid.toString()
 
 
+
+
             mRef!!.child("User").child(uuidString).child("userMail").setValue(userEmail)
             mRef!!.child("User").child(uuidString).child("userName").setValue(userName)
             mRef!!.child("User").child(uuidString).child("userPhone").setValue(userPhone)
